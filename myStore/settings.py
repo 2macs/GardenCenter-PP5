@@ -19,21 +19,20 @@ if os.path.exists("env.py"):
     import env
 
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = "DEVELOPMENT" in os.environ
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-2macs-gardencenter-pp5-a4hyw4i6hq.us2.codeanyapp.com'
+    "https://8000-2macs-gardencenter-pp5-qvc16qpmwr.us2.codeanyapp.com"
 ]
-ALLOWED_HOSTS = ['8000-2macs-gardencenter-pp5-a4hyw4i6hq.us2.codeanyapp.com']
+ALLOWED_HOSTS = ["8000-2macs-gardencenter-pp5-qvc16qpmwr.us2.codeanyapp.com"]
 
 
 # Application definition
@@ -49,9 +48,8 @@ INSTALLED_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
-
     # Apps
-    'home',
+    "home",
 ]
 
 MIDDLEWARE = [
@@ -70,7 +68,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, "templates"),
         ],
         "APP_DIRS": True,
         "OPTIONS": {
@@ -85,26 +83,24 @@ TEMPLATES = [
 ]
 
 AUTHENTICATION_BACKENDS = [
-    
     # Needed to login by username in Django admin, regardless of `allauth`
-    'django.contrib.auth.backends.ModelBackend',
-
+    "django.contrib.auth.backends.ModelBackend",
     # `allauth` specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',    
+    "allauth.account.auth_backends.AuthenticationBackend",
 ]
 
 SITE_ID = 1
 
 # Temp, get email to consol for development
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
-ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_AUTHENTICATION_METHOD = "username_email"
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
-LOGIN_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = '/success'
+LOGIN_URL = "/accounts/login/"
+LOGIN_REDIRECT_URL = "/success"
 
 WSGI_APPLICATION = "myStore.wsgi.application"
 
