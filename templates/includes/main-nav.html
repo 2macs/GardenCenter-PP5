@@ -19,10 +19,10 @@
                 Plants
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="plant-link">
-                <a href="" class="dropdown-item">Thrillers</a>
-                <a href="" class="dropdown-item">Fillers</a>
-                <a href="" class="dropdown-item">Spillers</a>
-                <a href="" class="dropdown-item">All Plants</a>
+                <a href="{% url 'products' %}?category=thrillers" class="dropdown-item">Thrillers</a>
+                <a href="{% url 'products' %}?category=fillers" class="dropdown-item">Fillers</a>
+                <a href="{% url 'products' %}?category=spillers" class="dropdown-item">Spillers</a>
+                <a href="{% url 'products' %}?category=thrillers,fillers,spillers" class="dropdown-item">All Plants</a>
             </div>
         </li>
 
@@ -32,10 +32,10 @@
                 Seeds
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="seeds-link">
-                <a href="" class="dropdown-item">Chilli</a>
-                <a href="" class="dropdown-item">Fruit </a>
-                <a href="" class="dropdown-item">Vegetable </a>
-                <a href="" class="dropdown-item">All Seeds</a>
+                <a href="{% url 'products' %}?category=chilli" class="dropdown-item">Chilli</a>
+                <a href="{% url 'products' %}?category=fruit" class="dropdown-item">Fruit </a>
+                <a href="{% url 'products' %}?category=veg" class="dropdown-item">Vegetable </a>
+                <a href="{% url 'products' %}?category=chilli,fruit,veg" class="dropdown-item">All Seeds</a>
             </div>
         </li>
 
@@ -45,9 +45,9 @@
                 Trees
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="trees-link">
-                <a href="" class="dropdown-item">Fruit Trees</a>
-                <a href="" class="dropdown-item">Non-Fruit Trees</a>
-                <a href="" class="dropdown-item">All trees</a>
+                <a href="{% url 'products' %}?category=fruit-trees" class="dropdown-item">Fruit Trees</a>
+                <a href="{% url 'products' %}?category=non-fruit-trees" class="dropdown-item">Non-Fruit Trees</a>
+                <a href="{% url 'products' %}?category=fruit-trees,non-fruit-trees" class="dropdown-item">All trees</a>
             </div>
         </li>
 
@@ -57,7 +57,7 @@
                 Equipment
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="equipment-link">
-                <a href="" class="dropdown-item">All equipment</a>
+                <a href="{% url 'products' %}?category=equipment" class="dropdown-item">All equipment</a>
             </div>
         </li>
     </ul>
