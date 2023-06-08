@@ -10,3 +10,6 @@ The purpose of this document is to capture User Story development and progress t
 ### 4th June 2023
 
 ![User login and products page](Extra_Images/Agile_Images/20230604.PNG "User Stories 20230604")
+
+### 8th June 2023
+![Shopping bag and toast messages comleted](Extra_Images/Agile_Images/20230608.PNG "User Stories 20230608")
