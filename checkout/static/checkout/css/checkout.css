@@ -30,6 +30,18 @@
     right: .5rem;
 }
 
+/* Country selector and other will be black if something selected */
+select,
+select option {
+    color: #000000;
+}
+
+/* Country selector and other will be gray if nothing selected */
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
 #payment-form .form-control,
 #card-element {
     color: #000;
