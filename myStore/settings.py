@@ -32,7 +32,10 @@ DEBUG = "DEVELOPMENT" in os.environ
 CSRF_TRUSTED_ORIGINS = [
     "https://8000-2macs-gardencenter-pp5-rsciqgihqk.us2.codeanyapp.com"
 ]
-ALLOWED_HOSTS = ["8000-2macs-gardencenter-pp5-rsciqgihqk.us2.codeanyapp.com", "localhost"]
+ALLOWED_HOSTS = [
+    "8000-2macs-gardencenter-pp5-rsciqgihqk.us2.codeanyapp.com",
+    "localhost",
+]
 
 
 # Application definition
@@ -54,6 +57,7 @@ INSTALLED_APPS = [
     "bag",
     "enquiry",
     "checkout",
+    "profiles",
     # other
     "crispy_forms",
 ]
