@@ -10,36 +10,26 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid p-5 bg-primary text-white text-center">
-    <h1>Contact Us</h1>
-    <p><i class="fa-solid fa-phone"></i> +353-87-1111999</p>
-    <p><i class="fa-regular fa-envelope"></i> claremohosite.ie</p>
-</div>
-
-{% if sent == 1 %}
-<div class="jumbotron  text-center bg-light border-rounded">
-    <h1 class="display-4">Your Enquiry!</h1>
-    <p class="lead">Thank you for your enquiry, we will respond asap</p>
-    <a class="btn btn-primary btn-lg" href="/ " role="button">Ok</a>
-    <hr class="my-4">
-</div>
-{% endif %}
-
-<div class="container">
-    <div class="row">
-        <div class="col-sm-6 offset-sm-3 text-center">
-            <h1>Make an Enquiry</h1>
-        </div>
+<div class="overlay"></div>
+<div class="row">
+    <div class="col-12 col-md-4 text-center">
+        <h1><strong>Contact Us</strong></h1>
+        <h5><i class="fa-solid fa-phone"></i> +353-87-1111999</h5>
+        <h5><i class="fa-regular fa-envelope"></i> greenfingers.ie</h5>
     </div>
-    <div class="row">
-        <div class="col-sm-6  mx-auto">
+    <div class="col-12 col-md-8">
+        <div class="row text-center">
+            <h1><strong>Make an Enquiry</strong></h1>
+        </div>
+        <div class="row">
             <form class="enq-form" method="post">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" id="enq-button" onclick="test();">Submit Enquiry</button>
+                {% for field in form %}
+                {{ field | as_crispy_field }}
+                {% endfor %}
+                <button class="btn-black" type="submit" id="enq-button">Submit Enquiry</button>
             </form>
         </div>
     </div>
-
 </div>
 {% endblock %}
