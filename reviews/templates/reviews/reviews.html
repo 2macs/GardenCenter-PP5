@@ -11,15 +11,72 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container">
-    <div class="row text-center">
-        <div class="col-12">
-            <hr>
-            <h2 class="logo-font mb-4"><strong>Site Reviews</strong></h2>
-            <hr>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font"><strong>Our Reviews</strong></h2>
+            <hr class="w-50 mb-1">
         </div>
     </div>
+    <div class="row">
+        <div class="row">
+            {% for review in reviews %}
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <div class="card h-100 border border-black mx-5">
+                    <div class="card-body pb-0">
+                        <p class="card-title font-weight-bold">{{ review.heading}}</p>
+                        <p class="mb-0">{{ review.body }}</p>
+                    </div>
+                    <div class="card-footer bg-white pt-0 text-left">
+                        <div class="row">
+                            <div class="col">
+                                <p class=" mb-0 text-left font-weight-bold">Posted by:{{ review.author }}</p>
+                                <p class=" mb-0 text-left font-weight-bold">Date:{{ review.created_at }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:1 %}
+            <div class="col-12 d-sm-none mb-5">
+                <hr>
+            </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:2 %}
+            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                <hr>
+            </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:3 %}
+            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                <hr>
+            </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:4 %}
+            <div class="col-12 d-none d-xl-block mb-5">
+                <hr>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+    </div>
+
+    <!--Button at bottom of screen-->
+    <div class="btt-button shadow-sm rounded-0 border border-black">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        </a>
+    </div>
+    {% endblock %}
 
 
-</div>
-{% endblock %}
+    <!--JS to make button work-->
+    {% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('.btt-link').click(function (e) {
+            window.scrollTo(0, 0);
+        })
+    </script>
+    {% endblock %}

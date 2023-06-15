@@ -19,7 +19,7 @@ class SiteReview(models.Model):
         indexes = [models.Index(fields=['-created_at']),]
 
     def __str__(self):
-        return self.title
+        return self.heading
 
 
 # Comments model
