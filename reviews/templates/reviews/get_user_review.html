@@ -13,30 +13,25 @@
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 col-md-8 text-center mt-3">
-            <h2 class="logo-font"><strong>All Reviews</strong></h2>
+        <div class="col text-center mt-3">
+            <h2 class="logo-font"><strong>Reviews created by: {{ review_author }}</strong></h2>
             <hr class="w-50 mb-1">
-        </div>
-        <div class="col-12 col-md-4 text-center mt-3">
-            <h4 class="logo-font text-primary">
-                <a href="{% url 'get_user_review' %}">Your Reviews</a>
-            </h4>
         </div>
     </div>
     <div class="row">
         <div class="row">
-            {% for review in reviews %}
+            {% for user_review in user_reviews %}
             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card h-100 border border-black mx-5">
                     <div class="card-body pb-0">
-                        <p class="card-title font-weight-bold">{{ review.heading}}</p>
-                        <p class="mb-0">{{ review.body }}</p>
+                        <p class="card-title font-weight-bold">{{ user_review.heading}}</p>
+                        <p class="mb-0">{{ user_review.body }}</p>
                     </div>
                     <div class="card-footer bg-white pt-0 text-left">
                         <div class="row">
                             <div class="col">
-                                <p class=" mb-0 text-left font-weight-bold">Posted by:{{ review.author }}</p>
-                                <p class=" mb-0 text-left font-weight-bold">Date:{{ review.created_at }}</p>
+                                <p class=" mb-0 text-left font-weight-bold">Posted by:{{ user_review.author }}</p>
+                                <p class=" mb-0 text-left font-weight-bold">Date:{{ user_review.created_at }}</p>
                                 <a href="#">Comments</a>
                             </div>
                         </div>

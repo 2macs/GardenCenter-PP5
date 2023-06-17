@@ -26,3 +26,12 @@ def create_review(request):
     else:
         form = ReviewForm()
     return render(request, "reviews/create_review.html", {"form": form})
+
+
+@login_required
+def get_user_review(request):
+    author = request.user
+    user_reviews = SiteReview.objects.filter(author=author)
+    review_author = author
+    context = {"user_reviews": user_reviews, "review_author": review_author}
+    return render(request, "reviews/get_user_review.html", context)
