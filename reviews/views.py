@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from .models import SiteReview
 from .forms import ReviewForm
 from django.contrib.auth.decorators import login_required
@@ -35,3 +35,12 @@ def get_user_review(request):
     review_author = author
     context = {"user_reviews": user_reviews, "review_author": review_author}
     return render(request, "reviews/get_user_review.html", context)
+
+
+@login_required
+def delete_review(request, user_review_id):
+    """Delete a review, only review owner can delete"""
+    my_review = get_object_or_404(SiteReview, pk=user_review_id)
+    my_review.delete()
+    messages.success(request, "Review deleted!")
+    return redirect(reverse("get_user_review"))
