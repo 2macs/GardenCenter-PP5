@@ -27,7 +27,7 @@ class Comments(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     review = models.ForeignKey(
         SiteReview, on_delete=models.CASCADE, related_name='comments')
-    body = models.TextField()
+    body = models.TextField(label='Your Comment')
     created_at = models.DateTimeField(auto_now_add=True)
     allowed = models.BooleanField(default=True)
 

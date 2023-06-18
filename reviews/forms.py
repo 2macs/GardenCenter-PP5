@@ -10,11 +10,12 @@ class ReviewForm(forms.ModelForm):
             "body",
         ]
 
+
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comments
         fields = [
-            'user',
-            'review',
-            'body',
+            "user",
+            "review",
+            "body",
         ]

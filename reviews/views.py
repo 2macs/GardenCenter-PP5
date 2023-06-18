@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from .models import SiteReview, Comments
-from .forms import ReviewForm
-from django.contrib.auth.decorators import login_required
+from .forms import ReviewForm, CommentForm
+from django.contrib.auth.decorators import login_required, require_POST
 from django.contrib import messages
 
 # View all site reviews
@@ -75,14 +75,20 @@ def edit_review(request, user_review_id):
 
 
 @login_required
+@require_POST
 def add_comment(request, user_review_id):
-    review = get_object_or_404(Review, pk=user_review_id)
+    review = get_object_or_404(SiteReview, pk=user_review_id)
+    comment = None
+    form = CommentForm(date=request.POST)
+    if form.is_valid:
+        comment = form.save(commit=False)
+        comment.review = review  # assign the comment to the review
+        comment.save()
 
-    if request.method == "POST":
-        content = request.POST.get("body")
-        comment = Comment.objects.create(
-            content=content, user=request.user, review=review
-        )
-        return redirect("review_detail", user_review_id=user_review.id)
+    context = {
+        "review": review,
+        "form": form,
+        "comment": comment,
+    }
 
-    return render(request, "add_comment.html")
+    return render(request, "review_detail.html", context)
