@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
-from .models import SiteReview
+from .models import SiteReview, Comments
 from .forms import ReviewForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -56,10 +56,10 @@ def edit_review(request, user_review_id):
             form.save()
             messages.success(request, "Successfully updated your review!")
             return redirect(reverse("get_user_review"))
-        
+
         else:
             messages.error(
-            request, "Failed to update review. Please ensure the form is valid."
+                request, "Failed to update review. Please ensure the form is valid."
             )
     else:
         form = ReviewForm(instance=my_review)
@@ -72,3 +72,17 @@ def edit_review(request, user_review_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def add_comment(request, user_review_id):
+    review = get_object_or_404(Review, pk=user_review_id)
+
+    if request.method == "POST":
+        content = request.POST.get("body")
+        comment = Comment.objects.create(
+            content=content, user=request.user, review=review
+        )
+        return redirect("review_detail", user_review_id=user_review.id)
+
+    return render(request, "add_comment.html")
