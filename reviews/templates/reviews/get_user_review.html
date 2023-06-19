@@ -32,7 +32,7 @@
                             <div class="col">
                                 <p class=" mb-0 text-left font-weight-bold">Posted by:{{ user_review.author }}</p>
                                 <p class=" mb-0 text-left font-weight-bold">Date:{{ user_review.created_at }}</p>
-                                <a href="#">Comments</a>
+                                <a href="{% url 'add_comment' user_review.id %}">Comments</a>
                             </div>
                             <small class="ml-3">
                                 <a href="{% url 'edit_review' user_review.id %}">Edit</a> |
