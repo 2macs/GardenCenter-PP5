@@ -84,6 +84,16 @@ body {
     z-index: -1;
 }
 
+.overlay2 {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #aab7c4;
+    z-index: -1;
+}
+
 a.category-badge>span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
@@ -293,5 +303,16 @@ input[name='q']::placeholder {
 
     body {
         height: calc(100vh - 116px);
+    }
+
+    .this-size {
+        font-size: 2.5rem;
+    }
+}
+
+/* Main screen text on small screens */
+@media (max-width: 370px) {
+    .this-size {
+        font-size: 1.5rem;
     }
 }

@@ -45,8 +45,12 @@ def get_user_review(request):
 def delete_review(request, user_review_id):
     """Delete a review, only review owner can delete"""
     my_review = get_object_or_404(SiteReview, pk=user_review_id)
-    my_review.delete()
-    messages.success(request, "Review deleted!")
+    if not my_review.author == request.user:
+        messages.error(request, "Error, you are unauthorised to delete this review")
+        return redirect(reverse("all_reviews"))
+    else:
+        my_review.delete()
+        messages.success(request, "Review deleted!")
     return redirect(reverse("get_user_review"))
 
 
@@ -54,20 +58,25 @@ def delete_review(request, user_review_id):
 def edit_review(request, user_review_id):
     """Edit a review, only review owner can edit"""
     my_review = get_object_or_404(SiteReview, pk=user_review_id)
-    if request.method == "POST":
-        form = ReviewForm(request.POST, instance=my_review)
-        if form.is_valid():
-            form.save()
-            messages.success(request, "Successfully updated your review!")
-            return redirect(reverse("get_user_review"))
 
-        else:
-            messages.error(
-                request, "Failed to update review. Please ensure the form is valid."
-            )
+    if not my_review.author == request.user:
+        messages.error(request, "Error, you are unauthorised to edit this review")
+        return redirect(reverse("all_reviews"))
     else:
-        form = ReviewForm(instance=my_review)
-        messages.info(request, f"You are editing {my_review.heading}")
+        if request.method == "POST":
+            form = ReviewForm(request.POST, instance=my_review)
+            if form.is_valid():
+                form.save()
+                messages.success(request, "Successfully updated your review!")
+                return redirect(reverse("get_user_review"))
+
+            else:
+                messages.error(
+                    request, "Failed to update review. Please ensure the form is valid."
+                )
+        else:
+            form = ReviewForm(instance=my_review)
+            messages.info(request, f"You are editing {my_review.heading}")
 
     template = "reviews/edit_review.html"
     context = {
