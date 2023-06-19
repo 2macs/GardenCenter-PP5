@@ -36,7 +36,7 @@ CSRF_TRUSTED_ORIGINS = [
 ALLOWED_HOSTS = [
     "8000-2macs-gardencenter-pp5-rsciqgihqk.us2.codeanyapp.com",
     "localhost",
-    "https://git.heroku.com/my-garden-center-pp5.git",
+    " https://my-garden-center-pp5-3013861ae89f.herokuapp.com/",
 ]
 
 
