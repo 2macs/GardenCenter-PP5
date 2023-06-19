@@ -83,7 +83,7 @@ def add_comment(request, review_id):
     """A view to create a new comment"""
     print(review_id)
     review = get_object_or_404(SiteReview, pk=review_id)
-    comments = None
+    comments = review.comments.filter(allowed=True).order_by("-created_at")
 
     comment_form = CommentForm(data=request.POST)
     if comment_form.is_valid():

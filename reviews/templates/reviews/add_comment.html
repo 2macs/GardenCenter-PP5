@@ -14,9 +14,9 @@
 <div class="overlay"></div>
 <div class="row">
     <div class="col-12 text-center mt-5">
-        <h3>Review : {{ review.heading }}</h3>
-        <h5>Review by: {{ review.author }}</h5>
-        <h5></h5>Review date : {{ review.created_at }}</h5>
+        <h3 class="text-dark">Review : {{ review.heading }}</h3>
+        <h5 class="text-dark">Review by: {{ review.author }}</h5>
+        <h5 class="text-dark">Review date : {{ review.created_at }}</h5>
     </div>
 </div>
 <div class="row pt-2">
@@ -32,17 +32,15 @@
         </form>
     </div>
 </div>
-<div class="row pt-2">
+<div class="row mt-5">
     <div class="mx-auto col-10 col-md-8 col-lg-6">
-        <h5><strong>All comments (qty)</strong></h5>
-        {% with comments.count as total_count %}
-        {{ total_comments}} Comment {{ total_comments|pluralize}}
-        {% endwith %}
+        <h5 class="text-primary"><strong>All comments</strong></h5>
         {% if comments %}
         {% for comment in comments %}
-        <p>Comment {{ forloop.counter }} by {{ comment.user }}</p>
-        <p>Date: {{comment.created_on }}</p>
+        <p class="text-success">Comment {{ forloop.counter }} by {{ comment.user }}</p>
+        <p>Date: {{comment.created_at }}</p>
         <p>{{ comment.body|linebreaks}}</p>
+        <hr>
         {% endfor %}
         {% else %}
         <h3>Be the first to leave a comment on this review!</h3>
