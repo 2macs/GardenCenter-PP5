@@ -83,14 +83,14 @@ def add_comment(request, review_id):
     """A view to create a new comment"""
     print(review_id)
     review = get_object_or_404(SiteReview, pk=review_id)
-    comment = None
+    comments = None
 
     comment_form = CommentForm(data=request.POST)
     if comment_form.is_valid():
-        comment = comment_form.save(commit=False)
-        comment.user = request.user
-        comment.review = review
-        comment.save()
+        comments = comment_form.save(commit=False)
+        comments.user = request.user
+        comments.review = review
+        comments.save()
         messages.success(request, f"Your comment has been saved, thank you!")
         return redirect(reverse("all_reviews"))
     else:
@@ -100,6 +100,6 @@ def add_comment(request, review_id):
     context = {
         "review": review,
         "comment_form": comment_form,
-        "comment": comment,
+        "comments": comments,
     }
     return render(request, template, context)
