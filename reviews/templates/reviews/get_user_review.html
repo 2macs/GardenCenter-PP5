@@ -19,51 +19,49 @@
         </div>
     </div>
     <div class="row">
-        <div class="row">
-            {% for user_review in user_reviews %}
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                <div class="card h-100 border border-black mx-5">
-                    <div class="card-body pb-0">
-                        <p class="card-title font-weight-bold">{{ user_review.heading}}</p>
-                        <p class="mb-0">{{ user_review.body }}</p>
-                    </div>
-                    <div class="card-footer bg-white pt-0 text-left">
-                        <div class="row">
-                            <div class="col">
-                                <p class=" mb-0 text-left font-weight-bold">Posted by:{{ user_review.author }}</p>
-                                <p class=" mb-0 text-left font-weight-bold">Date:{{ user_review.created_at }}</p>
-                                <a href="{% url 'add_comment' user_review.id %}">Comments</a>
-                            </div>
-                            <small class="ml-3">
-                                <a href="{% url 'edit_review' user_review.id %}">Edit</a> |
-                                <a class="text-danger" href=" {% url 'delete_review' user_review.id %}">Delete</a>
-                            </small>
+        {% for user_review in user_reviews %}
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="card h-100 border border-black mx-5">
+                <div class="card-body pb-0">
+                    <p class="card-title font-weight-bold">{{ user_review.heading}}</p>
+                    <p class="mb-0">{{ user_review.body }}</p>
+                </div>
+                <div class="card-footer bg-white pt-0 text-left">
+                    <div class="row">
+                        <div class="col">
+                            <p class=" mb-0 text-left font-weight-bold">Posted by:{{ user_review.author }}</p>
+                            <p class=" mb-0 text-left font-weight-bold">Date:{{ user_review.created_at }}</p>
+                            <a href="{% url 'add_comment' user_review.id %}">Comments</a>
                         </div>
+                        <small class="ml-3">
+                            <a href="{% url 'edit_review' user_review.id %}">Edit</a> |
+                            <a class="text-danger" href=" {% url 'delete_review' user_review.id %}">Delete</a>
+                        </small>
                     </div>
                 </div>
             </div>
-            {% if forloop.counter|divisibleby:1 %}
-            <div class="col-12 d-sm-none mb-5">
-                <hr>
-            </div>
-            {% endif %}
-            {% if forloop.counter|divisibleby:2 %}
-            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                <hr>
-            </div>
-            {% endif %}
-            {% if forloop.counter|divisibleby:3 %}
-            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                <hr>
-            </div>
-            {% endif %}
-            {% if forloop.counter|divisibleby:4 %}
-            <div class="col-12 d-none d-xl-block mb-5">
-                <hr>
-            </div>
-            {% endif %}
-            {% endfor %}
         </div>
+        {% if forloop.counter|divisibleby:1 %}
+        <div class="col-12 d-sm-none mb-5">
+            <hr>
+        </div>
+        {% endif %}
+        {% if forloop.counter|divisibleby:2 %}
+        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+            <hr>
+        </div>
+        {% endif %}
+        {% if forloop.counter|divisibleby:3 %}
+        <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+            <hr>
+        </div>
+        {% endif %}
+        {% if forloop.counter|divisibleby:4 %}
+        <div class="col-12 d-none d-xl-block mb-5">
+            <hr>
+        </div>
+        {% endif %}
+        {% endfor %}
 
     </div>
 
