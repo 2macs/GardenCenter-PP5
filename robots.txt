@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Sitemap: https://my-garden-center-pp5-3013861ae89f.herokuapp.com/sitemap.xml
