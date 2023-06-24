@@ -28,8 +28,7 @@ urlpatterns = [
     path("bag/", include("bag.urls")),
     path("enquiry/", include("enquiry.urls")),
     path("checkout/", include("checkout.urls")),
-    path('profile/', include('profiles.urls')),
-    path('reviews/', include('reviews.urls')),
+    path("profile/", include("profiles.urls")),
+    path("reviews/", include("reviews.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-handler404 = 'myStore.views.handler404'
+handler404 = "myStore.views.handler404"
