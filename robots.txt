@@ -3,4 +3,5 @@ Disallow: /accounts/
 Disallow: /bag/
 Disallow: /checkout/
 Disallow: /profile/
+Disallow: /admin/
 Sitemap: https://my-garden-center-pp5-3013861ae89f.herokuapp.com/sitemap.xml
