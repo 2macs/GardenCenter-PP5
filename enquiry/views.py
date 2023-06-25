@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.contrib import messages
+from django.core.mail import send_mail
+from django.conf import settings
 
 from .forms import EnquiryForm
 
@@ -18,5 +20,4 @@ def make_enquiry(request):
 
 
 def subscribe_sign_up(request):
-     return render(request, "enquiry/subscribe.html/")
-
+    return render(request, "enquiry/subscribe.html/")
