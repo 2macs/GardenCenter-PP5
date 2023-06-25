@@ -15,3 +15,8 @@ def make_enquiry(request):
     else:
         form = EnquiryForm()
     return render(request, "enquiry/enquiry.html/", {"form": form})
+
+
+def subscribe_sign_up(request):
+     return render(request, "enquiry/subscribe.html/")
+
