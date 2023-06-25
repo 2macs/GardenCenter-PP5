@@ -14,6 +14,9 @@ def make_enquiry(request):
             messages.info(
                 request, f"Your enquiry has been registered, we will respond asap"
             )
+            subject = f"Thank you for your enquiry"
+            body = f"Dear {form['name']} , we will respond asap"
+            send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, [form["email"]])
     else:
         form = EnquiryForm()
     return render(request, "enquiry/enquiry.html/", {"form": form})

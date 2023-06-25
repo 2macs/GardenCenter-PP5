@@ -41,7 +41,7 @@
     <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
     <script
         type="text/javascript">(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = EMAIL; ftypes[0] = merge;, fnames[1] = FNAME; ftypes[1] = merge;, fnames[2] = LNAME; ftypes[2] = merge;, fnames[3] = ADDRESS; ftypes[3] = merge;, fnames[4] = PHONE; ftypes[4] = merge;, fnames[5] = BIRTHDAY; ftypes[5] = merge; false; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
-    </div>
+
     <!--Stripe JS-->
     <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
@@ -114,7 +114,7 @@
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             <a href="https://www.facebook.com/profile.php?id=100093973784257" target="_blank"
-                                class="dropdown-item">Our Facebook Page</a>
+                                rel="noopener nofollow" class="dropdown-item">Our Facebook Page</a>
                             <a href="{% url 'subscribe_sign_up' %}" target="_blank" class="dropdown-item">Newsletter
                                 Signup</a>
                         </div>
