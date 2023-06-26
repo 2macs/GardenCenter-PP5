@@ -17,7 +17,7 @@
         <h5><i class="fa-solid fa-phone"></i> +353-87-1111999</h5>
         <h5><i class="fa-regular fa-envelope"></i> greenfingers.ie</h5>
     </div>
-    <div class="col-12 col-md-8 mt-5">
+    <div class="col-8 text-center mx-auto col-md-8 mt-5">
         <div class="row text-center">
             <h1><strong>New Review</strong></h1>
         </div>
@@ -27,7 +27,7 @@
                 {% for field in form %}
                 {{ field | as_crispy_field }}
                 {% endfor %}
-                <button class="btn-black" type="submit" id="enq-button">Submit Review</button>
+                <button class="btn-black mb-2" type="submit" id="enq-button">Submit Review</button>
             </form>
         </div>
     </div>
