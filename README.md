@@ -391,6 +391,68 @@ The following technologies were used in this app:
 * <https://docs.djangoproject.com/en/4.1/>
 * Django 4 by example, Antonio Mele.
 * Code Institute - Boutique-Ado walkthrough.
+* <https://www.geeksforgeeks.org/django/>
 
+## Procedures
 
+### Heroku
 
+* Login to Heroku , if you dont have an account you will need to create one.
+* On your dashboard , click 'New'
+* Click 'Create new app'
+* Create an app name and Region, click Create App
+* In config vars you will need
+  * AWS_ACCESS_KEY_ID - this is AWS publishable key
+  * AWS_SECRET_ACCESS_KEY - this is AWS password / access key
+  * DATABASE_URL - path to ElephantSQL postgres database
+  * EMAIL_HOST_PASS - key from email provider granting access to the app.
+  * EMAIL_HOST_USER - your email address / login
+  * SECRET_KEY - made up key held in Django
+  * STRIPE_PUBLIC_KEY - use test version from Stripe
+  * STRIPE_SECRET_KEY - use test version from Stripe
+  * STRIPE_WH_SECRET - key for stripe webhooks
+  * USE_AWS - define if using AWS to store static files and media files.
+* In buildpacks add the heroku/python buildpack.
+* To deploy to Heroku
+  * Click Deploy on Heroku menu
+  * Under Deployment method select GitHub
+  * Connect App to GitHub repo
+  * In automatic deploys enable automatic deploys, each time you push to GitHub your app will be deployed to Heroku.
+  * Check Activity and ensure your app is both building successfully and eploying successfully to Heroku.
+  * Click OpenApp and check deployed app is behaving as expected.
+
+### AWS Bucket creation
+
+* Login to AWS , if you dont have an account you will need to create one.
+* Navigate to the Amazon S3 service.
+* Click on "Create bucket" to start the bucket creation process.
+* Provide a unique name for your bucket. Note that bucket names must be globally unique across all AWS accounts.
+* Choose the region where you want to create the bucket. Consider selecting a region that is geographically close to your users for better performance.
+* Click on "Create" to create the bucket.
+* Navigate to the IAM (Identity and Access Management) service in the AWS Management Console.
+* Click on "Groups" in the sidebar and create a group if you don't have one already e.g manage-my-garden-center.
+* Add users to the group or create individual users.eg my-garden-center-staticfiles-user.
+* Click Create Policy
+* select policy required, copy JSON into policies section.
+* Define the necessary permissions for the S3 bucket, such as read, write, or delete access.
+* Ensure the policy is attached to the group.
+* In django ensure that you are no longer connected to local server and run python manage.py collectstatic, should now be a static folder in your folder.
+* In the bucket, create a media folder and upload all required pictures etc into the media folder.
+* Your Heroku app should be styled correctly and displaying your images.
+
+### Stripe Configuration
+
+* Login to Stripe, if you dont have an account you will need to create one.
+* Under API keys copy your publishable key and secret key, these will be needed for the Heroku config vars referenced above.
+* Ensure you are using test versions.
+* Under webhooks create a new endpoint, use your heroku url.
+* Under signing secret , copy your signing secret for webhooks, this will be needed for Heroku CONFIG VARS.
+* To use stripe in django run pip install stripe in terminal.
+
+All required installs are included in requirements.txt, these can be installed by running pip install -r requirements.txt in the terminal.
+
+## Future Work
+
+* Change stripe keys to production keys to take actual payments through stripe
+* Generate a newsletter and send regularly to subscribers
+* Register the site with Google, start analysing data and make enhancements based off the data.
