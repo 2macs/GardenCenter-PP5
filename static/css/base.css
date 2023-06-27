@@ -323,6 +323,6 @@ input[name='q']::placeholder {
     }
 
     .mobile-margin {
-        margin-top: 5;
+        margin-top: 5px;
     }
 }
