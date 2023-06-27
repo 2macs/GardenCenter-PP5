@@ -1,108 +1,396 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![site Image](media/wisteria.jpg "wisteria.jpg")
 
-Welcome USER_NAME,
+# <center> Green Fingers Garden Center Ireland </center>
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Purpose
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Welcome to Green Fingers Garden Center Ireland. The purpose of this site is to provide a fully functioning e-commerce platform to enable enthusiastic gardeners of all standards to purchase great plants , seeds, trees and equipment and have these items deivered to the door.
 
-## Gitpod Reminders
+## Goal
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Our goal is to ensure that location is no impediment to enjoying this amazing and greatly satisfying pastime. Our site has been designed with the gardener in mind and all our products come with clear pictures, product description and planting instructions.
+The site has been designed to be used on PC but also on the move and all functionality is available on mobile platforms.
 
-`python3 -m http.server`
+## Target Audience
 
-A blue button should appear to click: _Make Public_,
+Research into potential users / customers have revealed that the following represent our target audience;
 
-Another blue button should appear to click: _Open Browser_.
+1. Experienced Gardeners - will use the site to search for a specific plant / seed / tree that may not be available locally currently. Or the customer may be in a remote area , far from a garden center and requiring home delivery.
+2. Beginner / curious gardeners - these are people that may be watching gardening shows on TV and wondering if they have an interest in gardening and would like to "have a go". These people may be a little nervous about going to a garden center as they may feel they are asking stupid or basic questions. Thus, being able to find what they want, order it and try it is what they are looking for. Other people in this persona may have a very small garden or a few plants and dabble in gardening from time to time, again, they want to see and find something attractive quickly, be able to pay for it and get it delivered to the door.
+3. Niche Gardeners - these are people with a specific interest, e.g. I want to grow the hottest chilli I can or I want to grow apple trees etc.
+4. Friends / families of gardeners - these are people that may know very little about gardening but will know what their friends / partners like and would be interested in buying gifts around gardening. These gifts tend to be longer lasting and are associated with the gift giver for a long period of time so these people also want to make a statement about their friendship / relationship to the gardener.
+5. Random customers - this group may be searching for a gift for a non-gardener or for themselves that is just a bit different from the norm and could be interpreted as thoughtful.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Please see [SEO_Keyword_Research.d](SEO_Keyword_Research.md)
 
-A blue button should appear to click: _Make Public_,
+We aim to address the needs of these groups by providing a well laid out website that supports the purchase of garden products from 'soup to nuts', also we conducted keyword reseacrch designed to make finding this website easier and more likely for people searching. The site also provides product descriptions and instructions and gives the cutomers a chance to view reviews of our site and leave enquiries / questions.
 
-Another blue button should appear to click: _Open Browser_.
+## Business and Customer Goals
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Business Goals
 
-To log into the Heroku toolbelt CLI:
+Goals of the business are as follows;
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* Increase Revenue - This is the primary objective for any business ! The garden Center E-Commerce Platform should boost the garden center's revenue by expanding its customer base and increasing sales. The platform aims to attract both existing and new customers by providing a user-friendly and efficient online shopping experience.
+* Expand Market Reach - By establishing an online presence, the garden center can extend its market reach beyond the local area. The platform should enable customers from different areas and regions to access and purchase products, thus increasing business growth and getting to more customers.
+* Enhance Customer Experience- a key business goal is to provide an enjoyable and seamless shopping experience for customers. The platform should be intuitive, visually appealing, and responsive across various devices, ensuring a smooth browsing and purchasing process. Providing features like search functionality, product categorisation, and customer reviews enhance the overall experience.
+* Improve Product Visibility: The e-commerce platform should showcase the garden center's products, make it easy for customers to find and explore our products. Clear and comprehensive product descriptions, high-quality images and clear instructions can promote sales.
+* Enable Secure Transactions: The site use tried and trusted STRIPE online payment system as building customer trust is crucial for any e-commerce platform. Stripe provides secure payment gateways and is known to be reliable and safe.
+* Order Management - the site should provide a user-friendly order management system , communicate with customers regarding their purchases and keep a history of customer purchases so the customer can see wthat they have purchased previously or not purchased previously!
+* Enhance Customer Care - the site should facilitate customer interactions such as responding to queries, subscribing to newsletters. Prompt and accurate responses increase customer satisfaction and loyalty.
+* Scale in the future - As the business grows the site should be able to grow with it. It should be straightforward to add new features , increase product ranges etc.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Customer Goals
 
-------
+* Convenience: Online shopping allows customers to browse and purchase items from the comfort of their own homes, saving them time, effort and money when compared to visiting physical stores. Online shoping also offers the convenience of having products delivered straight to their door.
+* Product Information: Customers shopping online for plants and garden equipment will gain a lot of confidence from detailed product descriptions and high-quality images. They may also want access to comprehensive instructions about planting etc. enabling them to make informed decisions.
+* Reviews and Recommendations: Online shoppers often rely on customer reviews and ratings to assess the quality and performance of products. Reviews and ratings from other customers to help them gauge the reliability and suitability of the products they seek to buy.
+* Selection: Online stores may offer products that local shops may not offer. Customers may be looking for diverse sproducts such as hard to find chilli varieties etc.
+* Expert Advice and Support: Some customers may require guidance or assistance in selecting the right plants or equipment for their specific needs. A future enhancement for the site may be to offer videos / tutorials etc.
+* Sustainability: more customers are concerned with sustainable practices thus buying online may be preferential to driving, parking etc. Care should also be taken not to annoy such customers with excessive packaging.
 
-## Release History
+## UI/UX design
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Wireframes
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+Please see [wireframes.md](wireframes.md)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+The colour scheme is based on the Boutique-Ado walkthrough. For forms etc. the overlay of a white background and black text provides clean lines and unfussy web pages.
+Google fonts was used to implement the Lato font across the website.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Site Features
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+to be completed
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Database Design
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### ERD
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+Please see [ERD](erd.md)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+* As per the diagram each product can have a single category, a category can have many products.
+* Each lineitem has a single product.
+* Auth user is connected in many places as a foreign key especially profiles table, reviews table , comments table.
+* There is a connection between profiles and orders to ensure a user has access to their order history.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+As well as the models provided by allauth and Boutique-Ado there are 3 custom models developed - SiteReviews, Comments and MakeEnquiry.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Marketing
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+Please see [ecommerce_strategy.md](ecommerce_strategy.md)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Facebook Mockup
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+Please see [FaceBook_Mockup](Extra_Images/facebook/facebook.PNG)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## User Stories
 
-------
+The following user stories were identified and created as issues in GitHub;
 
-## FAQ about the uptime script
+### User Story
 
-**Why have you added this script?**
+-----------------------------------------------------------------------------------
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+As  **Customer** I want to **have the same experience across different devices and screen sizes** so that I can **move from one to the other and customer experience is the same**
 
-**How will this affect me?**
+### Acceptance Criteria
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+* The app is responsive across different devices and screen sizes
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### Tasks
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+* [ ] Check app across different devices and screen sizes
 
-**So….?**
+* [ ] Develop bootstrap / css to maintain customer experience across eh different screen sizes
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+--------------------------------------------------------
 
-**Can I opt out?**
+### User Story
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+As  **Customer** I want to **add items to my shopping cart** so that I can **view the contents of my shopping cart**
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Acceptance Criteria
 
-**Anything more?**
+* Selected items appear in the shopping cart.
+* Associated prices appear in the shopping cart
+* Total price for all items is available in shopping cart
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Tasks
 
----
+* [x] For the product detail, add an 'Add to Cart' button.
 
-Happy coding!
+* [x] Add the product and product qty to the shopping cart
+* [x] Update the total cart cost
+* [x] Show the updated cart to the customer.
+
+----------------
+
+### User Story
+
+As  **Customer** I want to **be able to update qty , add or remove line items form the shopping cart prior to making a purchase** so that I can **buy exactly what I want**
+
+### Acceptance Criteria
+
+* Customer can add / remove line items, cart pricing will update.  Message confirming action is generated.
+* Customer can adjust selected quantities, cart pricing will update. Message confirming action is generated.
+
+### Tasks
+
+* [x] For each line item implement Add / Remove buttons, amend cart value, generate message to user.
+
+* [x] For each line item, add functionality to adjust selected qty, amend cart value, generate message to user.
+
+### Issues
+
+* [x] When the order qty was adjusted, the total price updated but not the line item price. Forgot to call adjust_item_qty and pass it qty and price.
+
+----------------------
+
+### User Story
+
+As  **Customer** I want to **see product details when I select a product** so that I can **find out more about that product**
+
+### Acceptance Criteria
+
+* When a customer selects a product , a product detail page appears
+* The customer can return to home page from the product detail page
+* The customer can return to the products page from the product detail page
+
+### Tasks
+
+* [x] Develop html and CSS for the product detail page
+
+* [x] Develop views and URLs to map the product detail page.
+* [x] Enable customer to navigate around the site from the product detail page.
+* [x] The product detail should include a product image, description, price.
+
+------------------------
+
+### User Story
+
+As an **admin** I want to **respond promptly to customer enquiries** so that I can **respond quickly to customer needs and questions**
+
+### Acceptance Criteria
+
+* Customer can create an enquiry and submit the enquiry
+* Enquiry can be viewed by the admin in the admin panel
+* Enquiry can be viewed by the admin in the app without using the admin panel
+* Email confirmation sent to the customer
+* Email sent to the admin telling the admin a new enquiry has been generated
+
+### Tasks
+
+* [x] Create Enquiry data model and associated form
+
+* [x] Generate message on screen to Customer that Enquiry has been submitted
+* [x] Generate Email to customer that Enquiry has been submitted
+* [x] Generate Email to admin detailing that enquiry has been submitted
+* [x] Update the admin panel with new Enquiry
+
+----------------------------------------------------------------
+
+### User Story
+
+As  **Customer** I want to **the app to be visually appealing and user friendly** so that I can **focus on the shopping experience and not focus on navigating / using the app**
+
+### Acceptance Criteria
+
+* Main navigation links are available on all pages
+* Use of colors , fonts etc. are consistent across the site
+* Use of graphics / images where possible to enhance the visual appeal of the site
+
+### Tasks
+
+* [x] Create a base template , consistent across all pages.
+
+* [x] Create std set of colors.
+* [x] Seamless navigation around the site, products/cart etc. always available.
+
+------------------------------------
+
+### User Story
+
+As a site owner I want to have a facility that allows a user to subscribe to our site so that I can keep the customer informed about offers etc.
+
+### Tasks
+
+* [x] Select a subscriber service - MailChimp recommended
+* [x] Add user option to main header bar, footer doesn't fit with site UX.
+
+### Bugs
+
+* [x] Deployed site crashed when code from mailchimp incorporated, found html, css and JS code through Chrome.
+
+------------------------------------------
+
+### User Story
+
+As  **Customer** I want to **I want to view my order history** so that I can **see what I purchased in the past**
+
+### Acceptance Criteria
+
+* Users profile setup
+* View order history by user profile
+
+### Tasks
+
+* [x] Develop user profile functionality
+
+* [x] Develop template to display order history to user
+* [x] User can only see own order history, another user cannot view the current users order history.
+
+---------------------------------------
+
+### User Story
+
+As  **customer** I want to **proceed to checkout and provide shipping and billing information** so that I can **get products delivered to a location that best suits me and pay online**
+
+### Acceptance Criteria
+
+* User has access to a form requesting shipping address details.
+* User can input credit card details to pay for the products.
+* User gets payment success / payment failure messages as appropriate.
+
+### Tasks
+
+* [x] Create shipping/ billing form.
+
+* [x] Add field for credit card information
+* [x] Implement STRIPE functionality
+* [x] Implement webhooks to ensure no issues with interrupted / semi complete transactions.
+* [x] Generate email to customer detailing order summary and order cost.
+
+### Issues
+
+* [x] Webhooks returning an error, checking the endpoint is correct  - needed to make port public and include import stripe at top of webhook handler.
+
+-----------------------------------------------
+
+### User Story
+
+As  **customer** I want to **receive email notifications confirming my order** so that I can **be sure my order has been processed correctly**
+
+### Acceptance Criteria
+
+* On creation of a successful order, an email order confirmation is sent to the customer.
+
+### Tasks
+
+* [x] Setup email in Django to send an Email to a customer
+
+* [x] Create email message body and header bodies
+
+---------------------
+
+### User Story: Product Management
+
+As  **admin** I want to **be able to add new products, update existing products, and remove products from the app** so that I can **keep control of the product offering**
+
+### Acceptance Criteria
+
+* Create an admin panel allowing for addition, editing and removal of products from the app.
+* Admin panel is only accessible to a logged in admin user.
+* Create templates to allow addition, removal and editing of products without going to admin panel.
+* Product Management functionality can only be accessed by a logged in admin.
+
+### Tasks
+
+* [x] Register data models in Django to create an admin panel.
+* [x] Create super user to access the admin panel.
+* [x] Create navigation to product management templates.
+* [x] Create Product Management templates.
+* [x] Use product management templates, confirm results in admin panel.
+
+------------------------------
+
+### User Story
+
+As  **Customer** I want to **log in and create an account** so that I can **have a more personal and secure experience in the app**
+
+### Acceptance Criteria
+
+* User can log into the app, user is informed when log in is successful
+* User can log out of the app, user is informed when logout is successful
+* If the user has not already done so, the user is directed to register to create an account, user is informed when registration is successful
+
+### Tasks
+
+* [x] Using Django allauth install the relevant functionality to control login/logout/registration
+
+* [x] Create the login template
+* [x] Create the logout template
+* [x] Create the registration template
+* [x] Implement messaging for above actions
+
+-----------------------
+
+### User Story
+
+As a **Customer** I want to **view all products** so that I can **browse through them and see what is available**
+
+### Acceptance Criteria
+
+* Clicking on the All products link shows the customer all the products available to buy.
+* Products should be rows of 3 on large screens.
+* Products  should be stacked one on top of each other on small screens.
+
+### Tasks
+
+* [x] Determine which products will be included in the site
+
+* [x] Define product categories
+* [x] Develop functionality to enable customer to view all products, 3 per row on large screens.
+* [x] Develop functionality to enable the customer to view products by category.
+
+### Bugs
+
+* [x] Images for the products are different sizes, need to resolve in CSS. Decided to cut the images to sizer re-submit to the app.
+
+* [x] Background Image on index.html not appearing today.
+
+---------------------------------------
+
+## Manual Testing
+
+aaaaaaaaaaaaa
+
+## Technologies Used
+
+The following technologies were used in this app:
+
+* HTML / CSS / JQuery were used to design and style the webpages.
+* Python3.8.12 was used for the Python coding.
+* Django 3.2.18. provides the app framework.
+* Bootstrap 4.4.1
+* Google fonts was used to import the Lato font.
+* Font Awesome provides icons throughout the site, especially Home page and Explore page.
+* codeanywhere - used for version control by utilizing the terminal to commit to Add, Commit and Push to GitHub.
+* GitHub - used to store the projects code after being pushed from Git.
+* AWS - used to host / store images and staticfiles used in the app.
+* Heroku - used to host the final released web site.
+* Postgres used as database.
+* Pillow was used to manage images in Django
+<br />
+
+<hr />
+<br />
+
+## References and Credits
+
+* <https://www.gardenersworld.com/how-to/grow-plants/>
+* <https://thegoodearthgarden.com/camellia-care-planting-tips/#:~:text=Camellia%20care%20is%20pretty%20simple>,conditions%20to%20encourage%20new%20growth.
+* <https://www.gardens4you.ie/garden-plants/perennials/hosta>
+* <https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=243283#:~:text=Buxus%20sempervirens%20is%20a%20rounded>,as%2020%2D30'%20tall.
+* <https://hayloft.co.uk/growingsaxifraga#:~:text=Saxifraga%20are%20best%20suited%20to>,and%20width%20of%20your%20plant.
+* <https://www.thespruce.com/orange-tree-growing-guide-6541613>
+* <https://www.quickcrop.ie/product/pepper-chilli--jalapeno>
+* <https://www.lovemychillies.co.uk/carolina-reaper#:~:text=The%20Carolina%20Reaper%20is%20officially>,out%20at%202.2%20Million%20SHU!
+* <https://www.hss.gov.nt.ca/en/services/nutritional-food-fact-sheet-series/lettuce#:~:text=Lettuce%20is%20a%20leafy%20green>,helps%20keep%20our%20bodies%20healthy.
+* <https://johnstowngardencentre.ie/seeds-bulbs/seeds/lettuce-seeds.html>
+* Stack Overflow - numerous questions and sites followed.
+* <https://docs.djangoproject.com/en/4.1/>
+* Django 4 by example, Antonio Mele.
+* Code Institute - Boutique-Ado walkthrough.
+
+
+

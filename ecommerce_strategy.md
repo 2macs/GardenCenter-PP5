@@ -2,7 +2,8 @@
 
 ## Purpose
 
-The purpose of this document is to docueent the approach to online marketing for the garden center app. At this point in time, the garden center is a smal, family owned business just getting started. The business does have a walk in revenue stream and intent is that online sales will enable the business to reach out to a wider range on nationwide customers.
+The purpose of this document is to document the approach to online marketing for the garden center app. At this point in time, the garden center is a smal, family owned business just getting started. The business does have a walk in revenue stream and intent is that online sales will enable the business to reach out to a wider range on nationwide customers.
+The business model is B2C, it is expected that we will primarily sell to gardeners.
 
 ### Who are the users
 
@@ -18,11 +19,25 @@ For the most part, though not exclusively, the customers are in the age group th
 
 ### Business Goals
 
-The goal of the online platform is to expand the reach of the garden center business beyond the current walk in business. The goal is to enable the customer to find the site, like what they see, make a purchase and leave a favourable review. Reviews will be checked and actioned by the business ownership and the business should evolve over time to meet the changing needs of its customers by offering products not currently available ( but requested ) etc.
+* Increase Revenue - This is the primary objective for any business ! The garden Center E-Commerce Platform should boost the garden center's revenue by expanding its customer base and increasing sales. The platform aims to attract both existing and new customers by providing a user-friendly and efficient online shopping experience.
+* Expand Market Reach - By establishing an online presence, the garden center can extend its market reach beyond the local area. The platform should enable customers from different areas and regions to access and purchase products, thus increasing business growth and getting to more customers.
+* Enhance Customer Experience- a key business goal is to provide an enjoyable and seamless shopping experience for customers. The platform should be intuitive, visually appealing, and responsive across various devices, ensuring a smooth browsing and purchasing process. Providing features like search functionality, product categorisation, and customer reviews enhance the overall experience.
+* Improve Product Visibility: The e-commerce platform should showcase the garden center's products, make it easy for customers to find and explore our products. Clear and comprehensive product descriptions, high-quality images and clear instructions can promote sales.
+* Enable Secure Transactions: The site use tried and trusted STRIPE online payment system as building customer trust is crucial for any e-commerce platform. Stripe provides secure payment gateways and is known to be reliable and safe.
+* Order Management - the site should provide a user-friendly order management system , communicate with customers regarding their purchases and keep a history of customer purchases so the customer can see wthat they have purchased previously or not purchased previously!
+* Enhance Customer Care - the site should facilitate customer interactions such as responding to queries, subscribing to newsletters. Prompt and accurate responses increase customer satisfaction and loyalty.
+* Scale in the future - As the business grows the site should be able to grow with it. It should be straightforward to add new features , increase product ranges etc.
 
 ### Marketing Plan
 
-* Design the site to enable the customer to easily find products of interest , pay for them and receive them and then leave a review.
-  * Ensure thorough keyword searches performed.
-* Create a FaceBook page to enable visiting the site on tablets etc, this may entice further investigation of the site.
-* Create a newsletter detailing what plants etc are in season, any special offers, care points etc.
+#### Plan
+
+* Identify target audience
+* Understand our business goals
+* Branding - great landing page, buidl reputation and credibility.
+* Implement search engine optimization (SEO) strategies to improve our site's website's visibility on search engine results pages.
+* Content marketing: Create valuable and engaging content related to gardening. Create a newsletter in future with details of new products.
+* Customer reviews and testimonials: Encourage satisfied customers to leave reviews and testimonials on the site or other sites used by gardeners. Positive reviews build trust and credibility, encouraging new customers to make a purchase.
+* Paid Advertising - not an option for now, as revenue and reach increases then this approach and attendance at garden / flower shows should be activated.
+* Social media marketing: initially create a Facebook page and engage through Facebook. As revenue increases look to get on other platforms.
+* Email marketing: Build an email list by offering a newsletter. Send regular newsletters to our customers. Provide them with relevant content - beware of becoming SPAM.
