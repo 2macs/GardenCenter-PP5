@@ -15,6 +15,7 @@ def make_enquiry(request):
             messages.info(
                 request, f"Your enquiry has been registered, we will respond asap"
             )
+            # send email to user
             subject = f"Thank you for your enquiry"
             body = f"Dear {cd['name']} , we will respond asap"
             send_mail(
@@ -23,6 +24,18 @@ def make_enquiry(request):
                 "amcneill83@gmail.com",
                 [
                     cd["email"],
+                ],
+                fail_silently=False,
+            )
+            # inform admin of new enquiry
+            subject_admin = f"Attention - new enquiry"
+            body_admin = "Check admin panel, a new enquiry has been received!"
+            send_mail(
+                subject_admin,
+                body_admin,
+                "amcneill83@gmail.com",
+                [
+                    "amcneill83@gmail.com",
                 ],
                 fail_silently=False,
             )
