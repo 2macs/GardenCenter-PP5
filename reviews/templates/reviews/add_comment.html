@@ -39,7 +39,7 @@
         {% for comment in comments %}
         <p class="text-success">Comment {{ forloop.counter }} by {{ comment.user }}</p>
         <p>Date: {{comment.created_at }}</p>
-        <p>{{ comment.body|linebreaks}}</p>
+        {{ comment.body|linebreaks}}
         <hr>
         {% endfor %}
         {% else %}

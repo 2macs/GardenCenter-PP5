@@ -1,10 +1,24 @@
 # Testing
 
 ### W3C Validator
+
 The following HTML pages were tested:
-* Index.html - No errors or warnings to show.
-* Explore.html - No errors or warnings to show.
-* Enquire.html - No errors or warnings to show.
-* Comment.html - No errors or warnings to show.
-* Booking.html - No errors or warnings to show.
-* Modify_booking.html - One error on line 66, "anchor tag cannot be a child of button tag". Functionality works and some sites recommend this approach. Fix for next release.
+
+* Homepage - No errors.
+* Contact Us - No errors.
+* All Reviews - No errors.
+* Get user reviews - No errors.
+* Edit review - No errors.
+* create a review - No errors.
+* Add a comment - No errors.
+* Add a product - No errors.
+* Profile page - No errors.
+* Products page - No errors.
+* Product Detail - No errors.
+* Bag page - No errors.
+* Checkout - No errors.
+* Checkout Success - No errors.
+
+Did not test allauth pages as these are standard Django pages.
+
+### Python Flake8 testing
