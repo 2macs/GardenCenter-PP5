@@ -1,8 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
-from .models import SiteReview, Comments
+from .models import SiteReview
 from .forms import ReviewForm, CommentForm
 from django.contrib.auth.decorators import login_required
-from django.views.decorators.http import require_POST
 from django.contrib import messages
 
 # View all site reviews
@@ -23,7 +22,7 @@ def create_review(request):
             review = form.save(commit=False)
             review.author = request.user  # Assign the current signed-in user
             review.save()
-            messages.info(request, f"Thank you for your review!")
+            messages.info(request, "Thank you for your review!")
             return redirect("all_reviews")
 
     else:
@@ -46,7 +45,9 @@ def delete_review(request, user_review_id):
     """Delete a review, only review owner can delete"""
     my_review = get_object_or_404(SiteReview, pk=user_review_id)
     if not my_review.author == request.user:
-        messages.error(request, "Error, you are unauthorised to delete this review")
+        messages.error(
+            request, "Error, you are unauthorised to " / "delete this review"
+        )
         return redirect(reverse("all_reviews"))
     else:
         my_review.delete()
@@ -60,7 +61,7 @@ def edit_review(request, user_review_id):
     my_review = get_object_or_404(SiteReview, pk=user_review_id)
 
     if not my_review.author == request.user:
-        messages.error(request, "Error, you are unauthorised to edit this review")
+        messages.error(request, "Error, you are unauthorised to edit" / "this review")
         return redirect(reverse("all_reviews"))
     else:
         if request.method == "POST":
@@ -72,11 +73,12 @@ def edit_review(request, user_review_id):
 
             else:
                 messages.error(
-                    request, "Failed to update review. Please ensure the form is valid."
+                    request,
+                    "Failed to update review. Please ensure the " / "form is valid.",
                 )
         else:
             form = ReviewForm(instance=my_review)
-            messages.info(request, f"You are editing {my_review.heading}")
+            messages.info(request, "You are editing {my_review.heading}")
 
     template = "reviews/edit_review.html"
     context = {
@@ -100,7 +102,7 @@ def add_comment(request, review_id):
         comments.user = request.user
         comments.review = review
         comments.save()
-        messages.success(request, f"Your comment has been saved, thank you!")
+        messages.success(request, "Your comment has been saved, thank you!")
         return redirect(reverse("all_reviews"))
     else:
         comment_form = CommentForm()

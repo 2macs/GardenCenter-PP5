@@ -31,10 +31,13 @@ DEBUG = "DEVELOPMENT" in os.environ
 
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-2macs-gardencenter-pp5-rsciqgihqk.us2.codeanyapp.com"
+    "https://8000-2macs-gardencenter-pp5-rsciqgihqk.us2.codeanyapp.com",
+    "https://8000-2macs-gardencenter-pp5-cre8w26ssf.us2.codeanyapp.com",
 ]
+
 ALLOWED_HOSTS = [
     "8000-2macs-gardencenter-pp5-rsciqgihqk.us2.codeanyapp.com",
+    "8000-2macs-gardencenter-pp5-cre8w26ssf.us2.codeanyapp.com",
     "localhost",
     "my-garden-center-pp5-3013861ae89f.herokuapp.com",
 ]
