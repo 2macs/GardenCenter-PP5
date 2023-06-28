@@ -45,9 +45,8 @@ def delete_review(request, user_review_id):
     """Delete a review, only review owner can delete"""
     my_review = get_object_or_404(SiteReview, pk=user_review_id)
     if not my_review.author == request.user:
-        messages.error(
-            request, "Error, you are unauthorised to " / "delete this review"
-        )
+        messages.error(request, "Error, you are unauthorised to " /
+                       "delete this review")
         return redirect(reverse("all_reviews"))
     else:
         my_review.delete()
@@ -61,7 +60,8 @@ def edit_review(request, user_review_id):
     my_review = get_object_or_404(SiteReview, pk=user_review_id)
 
     if not my_review.author == request.user:
-        messages.error(request, "Error, you are unauthorised to edit" / "this review")
+        messages.error(request, "Error, you are unauthorised to edit" /
+                       "this review")
         return redirect(reverse("all_reviews"))
     else:
         if request.method == "POST":
@@ -73,8 +73,8 @@ def edit_review(request, user_review_id):
 
             else:
                 messages.error(
-                    request,
-                    "Failed to update review. Please ensure the " / "form is valid.",
+                    request, "Failed to update review. Please ensure the " /
+                    "form is valid."
                 )
         else:
             form = ReviewForm(instance=my_review)

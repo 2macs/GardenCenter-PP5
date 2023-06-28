@@ -1,5 +1,4 @@
 from django.db import models
-from django.utils import timezone 
 from django.contrib.auth.models import User
 
 # Create your models here.
@@ -8,7 +7,7 @@ from django.contrib.auth.models import User
 # Reviews model
 class SiteReview(models.Model):
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name = 'site_review')
+        User, on_delete=models.CASCADE, related_name='site_review')
     heading = models.CharField(max_length=100)
     body = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
@@ -33,4 +32,3 @@ class Comments(models.Model):
 
     def __str__(self):
         return f'Comment by {self.user.username} on {self.review.heading}'
-
