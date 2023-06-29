@@ -65,7 +65,38 @@ by the app. Will not change.
 |Complete form fully, real email address|Message saying form submitted successfully, confirmation email to email address|As expected|Pass|
 |Email sent to admin email also|Email telling admin new enquiry received|As expected|Pass|
 |Enquiry logged to admin panel|Enquiry now appears on admin panel|As expected|Pass|
-|In admin panel click acknowledged button|Enquiry appears in list fileterd by acknowledged|As expected|Pass|
+|In admin panel click acknowledged button|Enquiry appears in list filtered by acknowledged|As expected|Pass|
+|Click Stay in Touch|Facebook option and sign on option appear|As expected|Pass|
+|Click Facebook page|Be directed to site facebook page|As expected|Pass|
+|Click Newsletter signup|Mailchimp sign up form appears|As expected|Pass|
+|Enter email address click subscribe|Success message from mailchimp|As expected|Pass|
+|Sign in to mailchimp, click Audience option|New email address appears on list|As expected|Pass|
+|Click Site Reviews|All reviews, Leave Review options appear|As expected|Pass|
+|Click All Reviews|All site reviews are listed as cards|As expected|Pass|
+|Click Your Reviews|Only user reviews are listed|As expected|Pass|
+|Click edit review|Edit review form appears with edit message|As expected|Pass|
+|Complete form and submit it|Success message, back to Your Reviews screen|As expected|Pass|
+|Check review has been edited|New text now visible in review|As expected|Pass|
+|Pick a review and click delete|Message and review deleted|As expected|Pass|
+|Click Leave Review|Review form appears|As expected|Pass|
+|Complete form and submit|Success message, Review saved|As expected|Pass|
+|Any review, click comments|If no comments, Be the first to leave a review message|As expected|Pass|
+|Click comments|Leave a comment|Success message, comment now appears under Review|As expected|Pass|
+|Click all products|All products appear on screen|As expected|Pass|
+|Click on bramley tree image|Bramley tree detail opens|As expected|Pass|
+|Click Add to bag|success message, product has been added|As expected|Pass|
+|Select another product and repeat|Two products in bag|As expected|Pass|
+|Click go to secure checkout|Bag contents on screen|As expected|Pass|
+|Adjust qty on a product click Update|Qty increases, success message shows, line total and grand total update|As expected|Pass|
+|Click secure checkout|Checkout page appears|As expected|Pass|
+|Fill out form, click complete order|Strip blue screen appears, success message|Pass|
+|Login to stripe, check dashboard|Webhooks should should payment intent succeeded|As expected|Pass|
+|Confirmation order sent to buyer|Order confirmation in email|As expected|Pass|
+|Shopping bag total back to zero|Zero in shopping bag top right|As expected|Pass|
+
+
+
+
 
 
 
