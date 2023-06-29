@@ -93,6 +93,10 @@ by the app. Will not change.
 |Login to stripe, check dashboard|Webhooks should should payment intent succeeded|As expected|Pass|
 |Confirmation order sent to buyer|Order confirmation in email|As expected|Pass|
 |Shopping bag total back to zero|Zero in shopping bag top right|As expected|Pass|
+|Click on My Account My Profile|Default delivery info on left, order history on right|As expected|Pass|
+|Change a field in profile, click save|success message, profile saved|As expected|Pass|
+
+
 
 
 
