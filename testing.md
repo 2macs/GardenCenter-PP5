@@ -35,6 +35,45 @@ This line is required to handle the 404 form for this project.
 * ./checkout/apps.py:8:9: F401 'checkout.signals' imported but unused , required
 by the app. Will not change.
 * build_asset errors not required for this app. Will not change.
+* Other system generated errors leaving as is. No imapct to functionality.
+
+## Functional Testing
+
+| Test                  | Expected       | Actual        |Result            |
+|-----------------------|----------------|---------------|------------------|  
+|Access the site | homepage appears with nav menuhomepage appears|As expected|Pass|
+|click All Products|Filter options are available|Product Filter options are avaialabe|Pass|
+|Click filter by price|Products listed cheapest to most expensive|As expected|Pass|
+|Click filter by rating|Products listed by rating highest to lowest|As expected|Pass|
+|Click filter by category|Products listed alphabetically by category|As expected|Pass|
+|Click All products|All products appear in order|As expected|Pass|
+|Click Plants menu option|Categories for plants are available|As expected|Pass|
+|Click Fillers|Plants in category appear are listed|As expected|Pass|
+|Click Thrillers|Plant in category appear|As expected|Pass|
+|Click Spillers|Plant in category appear|As expected|Pass|
+|Click All Plants|All Plants are listed|As expected|Pass|
+|Click All Plants|Category selection boxes appear on screen|As expected|Pass|
+|Repeat steps for seeds option|Seeds filtered as expected|As expected|Pass|
+|Repeat steps for Trees option|Trees filtered as expected|As expected|Pass|
+|Click Equipment|All equipment option appears|As expected|Pass|
+|Back to top button at bottom of screen|Brings user back to top|As expected|Pass|
+|Product images are clear and high quality|Images are clear, no blurring|As expected|Pass|
+|Free delivery banner|Banners located between menu items and products|As expected|Pass|
+|Click Contact Us|Telephone email to left, Form to right of screen|As expected|Pass|
+|Click submit, no fields completed|Error prevents form submit|As expected|Pass|
+|Complete form , leave one required field blank|Error prevents form being submitted|As expected|Pass|
+|Complete form fully, real email address|Message saying form submitted successfully, confirmation email to email address|As expected|Pass|
+|Email sent to admin email also|Email telling admin new enquiry received|As expected|Pass|
+|Enquiry logged to admin panel|Enquiry now appears on admin panel|As expected|Pass|
+|In admin panel click acknowledged button|Enquiry appears in list fileterd by acknowledged|As expected|Pass|
+
+
+
+
+
+
+
+
 
 
 
