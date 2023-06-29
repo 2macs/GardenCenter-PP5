@@ -97,12 +97,8 @@ by the app. Will not change.
 |Change a field in profile, click save|success message, profile saved|As expected|Pass|
 |Click product Mgmt|Add product form appears|As expected|Pass|
 |Add a test product|Success message|The product can only be added if the image field is blank, the code for this was changed on advice from tutor support, this works on local server not on heroku|Partial Pass - load with no image, add image through admin panel|
-|You have succesfully registered|Success Message you have registered||
-
-
-
-
-
+|You have succesfully registered|Success Message you have registered|As expected|Pass|
+|Test page 404 works, add 'test' to site url|Page 404 appears|As expected|Pass|
 
 
 
