@@ -60,7 +60,41 @@ Google fonts was used to implement the Lato font across the website.
 
 ### Site Features
 
-to be completed
+The site features a very attractive landing page witha high quality image of a gardening scene, the home page also features a banner that persists throughout site and easy to read / access menu items.
+
+![Home Page](Extra_Images/Features/Screenshot1.png "Home page")
+
+The site featurs an ability to create and enquiry and see how to contact us,
+
+![Enquiry Page](Extra_Images/Features/Screenshot2.png "Enquiry Page")
+
+The site has a fully loaded products catalogue, with high quality pictures.
+
+![Products](Extra_Images/Features/Screenshot3.png "Products Page")
+
+The user can craete a shopping bag and place an order
+
+![Bag](Extra_Images/Features/Screenshot4.png "Shopping Bag")
+
+The site also has an associated facebook page 
+
+![Bag](Extra_Images/facebook/facebook.PNG "Shopping Bag")
+
+and a facility to sign up our monthly newsletters.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Database Design
 
@@ -352,7 +386,8 @@ As a **Customer** I want to **view all products** so that I can **browse through
 
 ## Manual Testing
 
-aaaaaaaaaaaaa
+### See testing document
+['Functional Testing'](testing.md 'testing.md')
 
 ## Technologies Used
 

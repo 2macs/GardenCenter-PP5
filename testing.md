@@ -81,7 +81,7 @@ by the app. Will not change.
 |Click Leave Review|Review form appears|As expected|Pass|
 |Complete form and submit|Success message, Review saved|As expected|Pass|
 |Any review, click comments|If no comments, Be the first to leave a review message|As expected|Pass|
-|Click comments|Leave a comment|Success message, comment now appears under Review|As expected|Pass|
+|Click comments Leave a comment|Success message, comment now appears under Review|As expected|Pass|
 |Click all products|All products appear on screen|As expected|Pass|
 |Click on bramley tree image|Bramley tree detail opens|As expected|Pass|
 |Click Add to bag|success message, product has been added|As expected|Pass|
@@ -95,6 +95,10 @@ by the app. Will not change.
 |Shopping bag total back to zero|Zero in shopping bag top right|As expected|Pass|
 |Click on My Account My Profile|Default delivery info on left, order history on right|As expected|Pass|
 |Change a field in profile, click save|success message, profile saved|As expected|Pass|
+|Click product Mgmt|Add product form appears|As expected|Pass|
+|Add a test product|Success message|The product can only be added if the image field is blank, the code for this was changed on advice from tutor support, this works on local server not on heroku|Partial Pass - load with no image, add image through admin panel|
+|You have succesfully registered|Success Message you have registered||
+
 
 
 
